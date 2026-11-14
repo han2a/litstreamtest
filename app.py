@@ -6,7 +6,7 @@ from datetime import date
 
 # Page configuration
 st.set_page_config(
-    page_title="Eartheareal | Earth & Climate Explorer",
+    page_title="EarthEReal | Earth & Climate Explorer",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -157,7 +157,7 @@ trend_data = pd.DataFrame({
 # Sidebar
 with st.sidebar:
     st.markdown("""
-    <div class="brand">EARTH<span>WATCH</span></div>
+    <div class="brand">EARTH<span>EREAL</span></div>
     <div class="subtitle">Earth & Climate Explorer</div>
     """, unsafe_allow_html=True)
     st.markdown("---")
@@ -283,7 +283,7 @@ def create_trend_chart():
 header_col1, header_col2 = st.columns([4, 1])
 with header_col1:
     st.markdown("""
-    <div class="brand">EARTH<span>WATCH</span></div>
+    <div class="brand">EARTH<span>EAREAL</span></div>
     <div class="subtitle">Explore our planet through climate and Earth observation data.</div>
     """, unsafe_allow_html=True)
 with header_col2:
@@ -374,11 +374,11 @@ elif page == "Historical Trends":
     st.warning("Historical values are simulated placeholders, not actual measurements.")
 
 elif page == "About":
-    st.markdown("## About EarthWatch")
+    st.markdown("## About EarthEReal")
     st.markdown("""
     <div class="info-panel">
         <h3 style="color:#22d3c5;">Understanding our changing planet.</h3>
-        EarthWatch is an interactive Earth and climate visualization
+        EarthEReal is an interactive Earth and climate visualization
         platform designed to make geospatial and environmental data
         more accessible.<br><br>
         The platform aims to combine satellite imagery, climate
