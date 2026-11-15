@@ -19,7 +19,13 @@ from django.views.decorators.http import require_GET, require_POST
 from . import analysis, chat, cmr, datasource, literature
 from . import app_config as config
 
-
+@csrf_exempt  # Allows external POST requests without a CSRF token
+def run_backend(request):
+    if request.method == "POST":
+        # Execute your backend logic here
+        return JsonResponse({"status": "executed"})
+    return JsonResponse({"error": "POST required"}, status=405)
+    
 def _error(msg, status=400):
     return JsonResponse({"error": msg}, status=status)
 
