@@ -9,4 +9,5 @@ urlpatterns = [
     path("api/analyze/", views.analyze, name="analyze"),
     path("api/literature/", views.literature_only, name="literature"),
     path("api/chat/", views.chat_endpoint, name="chat"),
+    path("run/", views.run_backend, name="run_backend"),
 ]
